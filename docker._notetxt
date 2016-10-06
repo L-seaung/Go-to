@@ -1,0 +1,35 @@
+L-0:docker 简介和安装
+    docker 是一个开源的，能把应用自动部署的开源引擎，它由Go语言编写，最初由dotCloud公司（docker公司的前身）于2013年初发布，源代码托管在github上，
+    遵从Apache2.x 协议进行发行
+    
+    docker的安装：
+      Lx-0：安装前检查
+        L-s-x-0：内核的版本 uname -a
+        L-s-x-1：检查存储驱动（Device Mapper）ls -l /sys/class/misc/device-mapper
+      Lx-1:ubuntu安装docker方式
+          sudo apt-get install docker.io
+      Lx-2:安装docker自己维护的docker的版本
+        L-s-x-0：检查APT对https的支持，查看/usr/lib/apt/methods/https 文件是否存在
+        如不在运行以下命令进行安装：
+          apt-get update  apt-get install -y apt-transport-https
+        L-s-x-1:添加docker的APT仓库
+          echo deb https://get.docker.com/ubuntu docker main > /etc/apt/sources.list.d/docker.list
+        L-s-x-2:添加仓库的key（自行在docker的官方网站进行，粘贴，复制）
+        L-s-x-3:安装
+          apt-get update
+          apt-get install -y lxc-docker
+      Lx-3:添加docker用户组和用户
+        L-s-x-0:sudo groupadd docker
+        L-s-x-1:sudo gpasswd -aG ${username} docker
+        L-s-x-2:sudo service docker restart(注销这样设置才会生效)
+    
+ L-1：docker组件
+    docker 由以下组件组成
+    Lx-0：images
+    Lx-1：registry
+    Lx-2：container
+    Lx-3：C/S
+    
+L-2：docker技术组件
+
+L-3：docker的基本命令
