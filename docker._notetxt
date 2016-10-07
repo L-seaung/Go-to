@@ -33,3 +33,10 @@ L-0:docker 简介和安装
 L-2：docker技术组件
 
 L-3：docker的基本命令
+    Lx-0：
+        docker run [options..] [images]
+        docker run -it ubuntu:14.04 /bin/bash
+    
+
+
+
