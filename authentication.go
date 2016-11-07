@@ -12,7 +12,7 @@ func main(){
 }
 
 func (a Authentication)Author string{
-  var i = 0
+  var i = 0 int
   var ms string
   io.Println("please enter your username and password:")
   io.Scanln(&a.username, &a.password)
